@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monga | {{ titleEN }}</title>
+    <link rel="stylesheet" href="{% static css %}">
+    <link rel="stylesheet" href="{% static css2 %}">
+    {% include 'font-awesome.html' %}
+</head>
+
+<body>
+    <!-- judul -->
+    {% block title %}
+    <h1>Selamat datang di {{ titleID }}</h1>
+    {% endblock title %}
+    <!-- nav -->
+    <ul>
+        {% for url,text,active in navigasi %}
+        <li class="{{ active }}">
+            <a href="{{ url }}">{{ text }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- main -->
+    <main style="height: 450px;">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, provident adipisci. Necessitatibus consequatur
+            veritatis, debitis doloribus aliquam est quia officia.
+        </p>
+        <img width="100%" src="{% static image %}" alt="">
+        {% block note %}
+
+        {% endblock note %}
+    </main>
+
+    {% include "footer.html" %}
+</body>
+
+</html>

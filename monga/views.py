@@ -8,10 +8,10 @@ def index(request):
         'bg': 'bg-paper-white.jpg',
         'css': 'style.css',
         'navigasi': [
-            ['/', 'Home'],
-            ['/news', 'News'],
-            ['/news/trending', 'Trending'],
-            ['/news/latest', 'Latest'],
+            ['/', 'Home', 'active'],
+            ['/news', 'News', ''],
+            ['/news/trending', 'Trending', ''],
+            ['/news/latest', 'Latest', ''],
         ]
     }
     return render(request, 'index.html', context)

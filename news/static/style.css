@@ -1,3 +1,32 @@
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(49, 49, 49);
+}
+
+li {
+    display: inline-block;
+}
+
+li a,
+li p {
+    text-decoration: none;
+    color: rgb(185, 183, 183);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px 12px;
+}
+
+li a:hover {
+    transition: 1s;
+    color: white;
+}
+
+li.active a {
+    color: white;
+}
+
 body {
     background-image: url('bg-paper-white.jpg');
     background-repeat: no-repeat;

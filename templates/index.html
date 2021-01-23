@@ -1,21 +1,11 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monga | {{ titleEN }}</title>
-    <link rel="stylesheet" href="{% static css %}">
-    <link rel="stylesheet" href="{% static css2 %}">
-</head>
-<body>
-    <h1>Selamat datang di {{ titleID }}</h1>
-    <ul>
-        {% for url,text in navigasi %}
-        <li>
-            <a href="{{ url }}">{{ text }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'template.html' %}
+
+{% block title %}
+<h1>Welcome to {{titleEN}}</h1>
+{% endblock title %}
+
+{% block note %}
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure temporibus vitae delectus nam veritatis officiis? Sint laboriosam reiciendis voluptatum saepe suscipit explicabo facilis totam. Nobis enim, soluta tempore cumque explicabo perferendis exercitationem sed, molestias eum dolore unde rerum tempora vitae ratione officiis illum animi cupiditate ipsum! Officiis minima architecto pariatur neque possimus sapiente sint sunt voluptatem eveniet excepturi totam adipisci provident, suscipit quam praesentium! Sed voluptates repellat accusamus. Rerum vitae impedit nulla provident vero nemo et enim consectetur omnis quia ad dolor ullam consequuntur quasi, laboriosam, tempore atque minus, laborum praesentium cum doloremque fuga voluptatem id itaque. Accusantium, nostrum illum!
+</p>
+{% endblock note %}
